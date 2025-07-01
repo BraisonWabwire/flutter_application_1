@@ -1,57 +1,36 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'Namer App',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+    return MaterialApp( // Root widget
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('My Home Page'),
         ),
-        home: MyHomePage(),
-      ),
-    );
-  }
-}
-
-class MyAppState extends ChangeNotifier {
-  var current = WordPair.random();
-
-void getNext() {
-    current = WordPair.random();
-    notifyListeners();
-  }
-}
-
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-
-    return Scaffold(
-      body: Column(
-        children: [
-          Text('A random AWESOME idea:'),  // ← Example change.
-          Text(appState.current.asLowerCase),
-          ElevatedButton(
-            onPressed: () {
-              print('button pressed!');
+        body: Center(
+          child: Builder(
+            builder: (context) {
+              return Column(
+                children: [
+                  const Text('Hello, World!'),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Click!');
+                    },
+                    child: const Text('A button'),
+                  ),
+                ],
+              );
             },
-            child: Text('Next'),
           ),
-
-        ],
+        ),
       ),
     );
   }
