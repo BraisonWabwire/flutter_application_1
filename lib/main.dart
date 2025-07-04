@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: Scaffold(
-      body: Center(
-        child: Text("Hello Braison"),
+      appBar: AppBar(
+        title: const Text("Braison coffee ID"),
+        backgroundColor: Colors.brown[700],
+        centerTitle: true,
       ),
+      body: const Text("hello ninjas!"),
     )
   ));
 }
