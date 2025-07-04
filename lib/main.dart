@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:namer_app/coffee_preps.dart';
 import 'package:namer_app/home.dart';
+
 
 void main() {
   runApp(MaterialApp(home: Home()));
@@ -15,28 +17,27 @@ class Sandbox extends StatelessWidget {
         title: const Text("Sandbox"),
         backgroundColor: Colors.grey,
       ),
-      body: Column(
-
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 100,
+            height: 100,
             color: Colors.red,
             child: const Text("one"),
           ),
-          Container(
-            width: 200,
-            color: const Color.fromARGB(255, 54, 244, 67),
-            child: const Text("one"),
+              Container(
+            height: 200,
+            color: Colors.green,
+            child: const Text("two"),
           ),
-          Container(
-            width: 300,
-            color: const Color.fromARGB(255, 108, 54, 244),
-            child: const Text("one"),
+              Container(
+            height: 300,
+            color: Colors.blue,
+            child: const Text("three"),
           )
         ],
-      ),
+      )
     );
   }
 }
