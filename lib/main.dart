@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:namer_app/home.dart';
+import 'package:namer_app/home.dart';
 
 void main() {
-  runApp(MaterialApp(home: Sandbox()));
+  runApp(MaterialApp(home: Home()));
 }
 
 class Sandbox extends StatelessWidget {
@@ -16,7 +16,9 @@ class Sandbox extends StatelessWidget {
         backgroundColor: Colors.grey,
       ),
       body: Column(
+
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
             width: 100,
