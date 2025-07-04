@@ -1,37 +1,40 @@
 import 'package:flutter/material.dart';
+// import 'package:namer_app/home.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Braison coffee ID"),
-          backgroundColor: Colors.brown[700],
-          centerTitle: true,
-        ),
-        body: const Home(),
-      ),
-    ),
-  );
+  runApp(MaterialApp(home: Sandbox()));
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Sandbox extends StatelessWidget {
+  const Sandbox({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.orange,
-      // width: 200,
-      // height: 100,
-      padding: EdgeInsets.all(20),
-      margin: const EdgeInsets.fromLTRB(10, 40, 0, 0),
-      child: const Text("Hello ninja Braison" ,style: TextStyle(
-        fontSize: 18,
-        decoration: TextDecoration.underline,
-        fontStyle: FontStyle.italic,
-
-      )),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sandbox"),
+        backgroundColor: Colors.grey,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            width: 100,
+            color: Colors.red,
+            child: const Text("one"),
+          ),
+          Container(
+            width: 200,
+            color: const Color.fromARGB(255, 54, 244, 67),
+            child: const Text("one"),
+          ),
+          Container(
+            width: 300,
+            color: const Color.fromARGB(255, 108, 54, 244),
+            child: const Text("one"),
+          )
+        ],
+      ),
     );
   }
 }
