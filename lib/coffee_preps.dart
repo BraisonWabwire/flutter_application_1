@@ -16,7 +16,8 @@ class Coffee extends StatelessWidget {
             color: Colors.white,
             colorBlendMode: BlendMode.multiply,
             ),
-            const SizedBox(width: 50),
+            const Expanded(child:SizedBox()),
+            FilledButton(onPressed: (){}, child: const Text("+")),
             
           ],
         ),
@@ -27,7 +28,9 @@ class Coffee extends StatelessWidget {
             Image.asset('assets/img/2.jpg',
             width: 25,
             ),
-            SizedBox(width: 50),
+            const Expanded(child:SizedBox()),
+            TextButton(onPressed: (){}, child: const Text("+")),
+
           ],
         )
       ],

@@ -8,11 +8,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Braison coffee ID" ,style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-
-        ),),
+        title: const Text(
+          "Braison coffee ID",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.brown[700],
         centerTitle: true,
       ),
@@ -29,6 +28,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: const Coffee(),
           ),
+          Expanded(child: Image.asset("assets/img/4.jpg", fit: BoxFit.fitWidth,alignment: Alignment.bottomCenter,)),
         ],
       ),
     );
